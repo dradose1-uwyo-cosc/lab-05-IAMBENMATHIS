@@ -3,10 +3,7 @@
 # 10/8/24
 # Lab 03 
 # Lab Section: 10
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Sources, people worked with, help given to: Austin Barner
 
 max_temps = [
     32, 24, 22, 25, 37, 33, 34, 40, 40, 42,
