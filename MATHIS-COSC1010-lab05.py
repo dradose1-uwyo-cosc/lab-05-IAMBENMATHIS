@@ -1,8 +1,8 @@
-# Your Name Here
-# UWYO COSC 1010
-# Submission Date
+# Ben Mathis
+# UWYO_COSC_1010
+# 10/8/24
 # Lab 03 
-# Lab Section: 
+# Lab Section: 10
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -94,9 +94,25 @@ min_temps = [
 # You cannot use in-built functions like max(), min() or sort the lists
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
+mtemp = 0
+ltemp = 0
+for temp in max_temps:
+    if temp > mtemp:
+        mtemp = temp
+    if temp < ltemp:
+        ltemp = temp
+print(f"Max temp = {mtemp}")
+print(f"Min temp = {ltemp}")
 
-print(f"Max temp = {max_temp}")
-print(f"Min temp = {min_temp}")
+mtemp = 0
+ltemp = 0
+for temp in min_temps:
+    if temp > mtemp:
+        mtemp = temp
+    if temp < ltemp:
+        ltemp = temp
+print(f"Max temp = {mtemp}")
+print(f"Min temp = {ltemp}")
 
 # Given the below list 
 numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, -25, 3, -10, -83, 63, 0, 13, -99, 87, -46, -88, -71, 4, -99, -15, -12, 72, -1, -20, -90, 32, -36, -59, 83, 78, 52, 43, 55, 12, 16, -37, -5, -98, -53]
@@ -104,11 +120,34 @@ numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, 
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
-print(f"Zero occurred {zero_count} time(s)")
+neg_memory_way = 0
+pos_memory_way = 0
+zedcount = 0
+for number in numbers:
+    if number < 0:
+        neg_memory_way = neg_memory_way + 1
+    if number > 0:
+        pos_memory_way = pos_memory_way + 1
+    if number == 0:
+        zedcount = zedcount + 1
+
+print(f"There are {neg_memory_way} negative numbers.")
+print(f"There are {pos_memory_way} positive numbers.")
+print(f"Zero occurred {zedcount} time(s).")
+
+
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
 
+pos_sum = 0
+neg_sum = 0
+
+for zorp in numbers:
+    if zorp > 0:
+        pos_sum = pos_sum + zorp
+    if zorp < 0:
+        neg_sum = neg_sum + zorp
+#ignore the zorp, we were having a moment. sorry.
 print(f"Sum of positive numbers {pos_sum}")
 print(f"Sum of negative numbers {neg_sum}")
+   
