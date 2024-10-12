@@ -3,7 +3,7 @@
 #10/12/24
 # HW 01
 # Lab Section: 3
-# Sources, people worked with, help given to: My friend who has done some Python, Caleb.
+# Sources, people worked with, help given to: asked a syntax question to my friend Caleb (who knows Python)
 
 
 # Homework Question:
@@ -39,6 +39,10 @@ students = [
 
 #setting variables to hold the values of "scores" and "name" so they can be used and 
 #added into the gpas dictionary
+#Figuring out the syntax here took some time, I was trying to acess the values directly with code like this
+#for student in students.values()
+#   students[student]['scores']
+#This didn't work, obviously. 
 for student in students:
     scores = student["scores"].values()
     names = student["name"]
@@ -46,6 +50,7 @@ for student in students:
 
 
 #Compairing avg score to 80, then printing name of student
+#this part was nice and easy
 for winner, grade in gpas.items():
    if grade >= 80:
        print(winner)
